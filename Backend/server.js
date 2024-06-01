@@ -1,11 +1,12 @@
 const express =  require('express')
 const app = express()
-const db = require('./db')
+
 const userModel = require('./Model/userModel')
 const cors = require('cors')
 const jwt = require('jsonwebtoken')
 const secret = 'thisIsSecretKey'
-
+require('dotenv').config();
+const db = require('./db')
 app.use(express.json())
 app.use(cors())
 
